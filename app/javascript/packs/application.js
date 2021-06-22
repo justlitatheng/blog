@@ -8,13 +8,14 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-require("bootstrap")
+import '../src/bootstrapModules.js'
+
 require("../stylesheets/application")
 require.context('../images', true)
 
 require("trix")
 require("@rails/actiontext")
-
+import '../src/popover.js'
 
 document.addEventListener('turbolinks:load', () => {
     document.addEventListener('click', () => {
