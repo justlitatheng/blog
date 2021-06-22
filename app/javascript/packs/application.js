@@ -3,25 +3,19 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-// import Rails from "@rails/ujs"
-// import Turbolinks from "turbolinks"
-// import * as ActiveStorage from "@rails/activestorage"
-// import "channels"
-
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-// Rails.start()
-// Turbolinks.start()
-// ActiveStorage.start()
+import '../src/bootstrapModules.js'
 
-import '../stylesheets/application';
+require("../stylesheets/application")
+require.context('../images', true)
 
 require("trix")
 require("@rails/actiontext")
-
+import '../src/popover.js'
 
 document.addEventListener('turbolinks:load', () => {
     document.addEventListener('click', () => {
