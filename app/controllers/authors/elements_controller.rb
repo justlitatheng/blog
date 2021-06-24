@@ -24,7 +24,7 @@ module Authors
       
         # DELETE /elements/1
         def destroy
-            @element.destroy
+            @element.destroy(element_params)
             redirect_to edit_post_path(@element.post)
         end
       
